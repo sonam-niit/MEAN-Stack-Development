@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String Functions</h1>
+    <script>
+        var myName="sonam soni"//String
+        //charAt
+        console.log("My string "+myName);
+        console.log("character at index 6 "+myName.charAt(6));
+        //ends with
+        console.log("check it ends with soni "+myName.endsWith("soni"));
+        console.log("check it ends with hello "+myName.endsWith("hello"));
+
+        //includes
+        console.log("check it contains nam ",myName.includes("nam"));
+
+        //slice
+
+        console.log("use slice ",myName.slice(4,10));
+
+        //split
+        console.log("split ",myName.split(' '));
+
+        //substring
+        console.log("sub string ",myName.substring(6));
+        console.log("sub string ",myName.substring(6,9));
+
+        //toLowerCase & Uppercase
+
+        console.log("Lower Case "+myName.toLowerCase());
+        console.log("Upper Case "+myName.toUpperCase());
+
+        //length
+
+        console.log("length "+myName.length);
+
+        for(let i=0;i<myName.length;i++){
+            console.log(myName[i].toUpperCase());
+        }
+
+    </script>
+</body>
+</html>

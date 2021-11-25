@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Scope of variables</h1>
+    <script>
+        function test(){
+            if(true){
+                var a="123";
+                let b="456";
+                const c="789";
+
+                
+            }
+            console.log("function scope "+a);
+            //below 2 lines will give error
+            console.log("block scope "+b);
+            console.log("block scope "+c);
+            
+        }
+
+        test();
+    </script>
+</body>
+</html>

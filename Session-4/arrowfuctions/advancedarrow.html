@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //callback with arrow functions
+        var add=(a,b)=> a+b;
+
+        var subtract = (a,b) => a-b;
+
+        var data= (func)=>{
+            var num1=10;
+            var num2=20;
+            return func(num1,num2);
+        }
+
+        console.log(data(add));
+        console.log(data(subtract));
+
+        //function return function with arrow functions
+
+        const multi= (integer)=> (anotherVar)=>integer * anotherVar;
+        const div= (integer)=>(anotherVar)=>integer / anotherVar;
+
+        const result1= multi(10)(50);
+        const result2=div(25)(5);
+
+        console.log(result1);
+        console.log(result2);
+
+    </script>
+</body>
+</html>

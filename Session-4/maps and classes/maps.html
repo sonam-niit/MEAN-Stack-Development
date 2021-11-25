@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var map1=new Map();
+
+        map1.set(1001,"Vivekanand");
+        map1.set(1002,"Darshan");
+        map1.set(1003,"Raghu");
+        map1.set(1004,"varun");
+        map1.set(1005,"Darshan");
+
+        console.log(map1);
+        console.log("map has 1003 ? " + map1.has(1003));
+        console.log("get value of 1003 key "+map1.get(1003));
+        console.log("Before delete " +map1.size);
+        console.log("delete 1005 "+map1.delete(1005));
+        console.log("After Delete "+map1.size);
+
+        var iterator=map1.entries();
+        for(let i=0;i<map1.size;i++)
+        {
+            console.log(iterator.next().value)
+        }
+        map1.clear();
+        console.log("After clear "+map1.size);
+
+        
+    </script>
+</body>
+</html>
