@@ -1,0 +1,34 @@
+Team Budget Planner
+------------------------------
+
+create Javascript App
+--------------------------------
+
+create one html file
+
+create two buttons
+
+addDetails            checkdetails
+------------------------------------------
+
+create javascript function to add details
+----------------------------------------
+
+ask employee to add product requirement and product prices
+
+add the entered details by user into empty array: call push method to add element.
+
+---------------------------------------------------------------------------------
+
+add multiple elements in array
+------------------------------------
+
+also create one method to check the details bymanager
+---------------------------------------------------------
+
+checkDetails()
+{
+	//load values from array
+	// calculate the total budget
+	// display total budget
+}

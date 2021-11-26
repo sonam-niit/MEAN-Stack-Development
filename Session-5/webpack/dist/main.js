@@ -1,0 +1,1 @@
+(()=>{var o,t,r,n={801:o=>{o.exports={sum:function(o,t){return o+t},multiply:function(o,t){return o*t}}}},i={};o=function o(t){var r=i[t];if(void 0!==r)return r.exports;var u=i[t]={exports:{}};return n[t](u,u.exports,o),u.exports}(801),t=o.sum(10,20),r=o.multiply(2,3),console.log("Addition "+t),console.log("Multiplication "+r)})();

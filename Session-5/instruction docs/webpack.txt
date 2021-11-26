@@ -1,0 +1,66 @@
+Webpack Demo
+--------------------------
+install node
+
+check node version--> node -v
+
+check npm version --> npm -v
+
+install yarn
+
+npm install yarn -g --> install yarn globally
+
+check yarn version --> yarn -v
+
+create folder webpack --> mkdir webpack
+
+move to that folder --> cd webpack
+
+create package.json file (configuration file)--> npm init -y
+
+add script in package.json file --> "build":"webpack", save it
+
+add webpack-cli in development server
+
+yarn add webpack webpack-cli --dev
+------------------------------------------------------
+create src folder
+
+create calculate.js file
+-------------------------------
+
+module.exports= {   
+    sum: function(a,b){
+        return a+b;
+    },
+    multiply: function(a,b){
+        return a*b;
+    }
+}
+--------------------------------
+create index.js file
+------------------------------------
+//imported the file
+var tools= require("./calculate.js");
+var value=  tools.sum(10,20);
+
+var result= tools.multiply(2,3);
+
+console.log("Addition "+value);
+console.log("Multiplication "+result);
+----------------------------------------------
+execute command npm run build
+
+will generate bundle in ~.webpack/dist/main.js 
+
+---------------------------------------------------
+to run you can execute: node dist/main.js
+
+or you can create script in package.json file
+
+"start":"node dist/main.js", --> save the file
+----------------------------------------------------
+execute npm start --> to check the result
+
+
+

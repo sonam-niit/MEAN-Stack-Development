@@ -1,0 +1,56 @@
+create a folder babelDemo
+-------------------------
+create index.html file
+
+create folder--> src --> create file app.js
+
+=======================================================
+move to the babelDemo folder in terminal using cd babelDemo command
+--------------------------------------------------------------------
+install babel
+--------------------------------------------
+
+npm install -g babel-cli@6.24.1
+
+check babel version : babel --version
+--------------------------------------------
+
+create package.json file: npm init -y
+
+lets set the babel presets
+
+yarn add babel-preset-es2015 babel-preset-env@1.5.2
+----------------------------------------------------------
+add below mentioned in app.js
+---------------------------------
+let sum = (a,b)=>{
+    console.log(a+b);
+}
+
+let multiply= (a,b)=>{
+    console.log(a*b);
+}
+
+sum(2,4);
+multiply(2,4);
+
+
+------------------------------------------------------
+to run: node src\app.js
+-------------------------------
+
+to check the compiled code using babel use below mentioned command
+------------------------------------------------------------------
+
+babel src/app.js --out-file= src/app.js --presets=env,es2015
+
+
+
+
+
+
+
+
+
+
+
