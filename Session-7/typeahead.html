@@ -1,0 +1,31 @@
+<html>
+    <head>
+      <title>Input Groups Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">  
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+    </head>
+    <body>
+    
+    <div class="container">
+      <form>
+        <div class="input-group">
+          <input type="text" class="typeahead form-control" name="query" id="query"
+          placeholder="type here" data-provide="typeahead" />
+
+          <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      $(document).ready(function(){
+        var data=["HTML","HTML5","CSS","Advanced-CSS","JAVA","Javascript"];
+        $("#query").typeahead({source:data})
+      })
+    </script>
+    </body>
+    </html>
+
+    
