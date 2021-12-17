@@ -1,0 +1,36 @@
+<h1>Property Binding</h1>
+<hr>
+<img [src]="image1" [height]="h" [width]="w" >
+<h1>Interpolation</h1>
+<hr>
+<h3>{{title}}</h3>
+
+<h1>Event Binding</h1>
+<hr>
+<button (click)="showPara()">Show My Pragraph</button>
+
+<p *ngIf="show">Show when user click on this button</p>
+<h1>Two Way Binding</h1>
+<hr>
+<input [(ngModel)]="name">
+
+<h4>My Name is {{name}}</h4>
+
+<h1>User click</h1>
+<hr>
+<button (click)="signUp()">Sign Up</button>
+<p><b>{{status}}</b></p>
+<h1>OnType Event</h1>
+<hr>
+<input type="text" placeholder="Enter your name" 
+(input)="ontyping($event)">
+<p>Welcome {{username}}</p>
+<h2>Component level Interaction: Parent Component</h2>
+----------------------------------------------------------------------------------
+<br>Enter Text:
+<input type="text" #ptext (keyup)="0"/>
+
+<h3>Value from child component {{cdata}}</h3>
+
+<app-child [pdata]="ptext.value" (cevent)="cdata=$event"></app-child>
+

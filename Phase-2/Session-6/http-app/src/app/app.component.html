@@ -1,0 +1,20 @@
+<h1>Http Demo</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>email</th>
+    <th>UserName</th>
+    <th>Phone</th>
+    <th>Website</th>
+  </tr>
+  <tr *ngFor="let u of users">
+   <td>{{u.id}}</td>
+   <td>{{u.name}}</td>
+   <td>{{u.email}}</td>
+   <td>{{u.username}}</td>
+   <td>{{u.phone}}</td>
+   <td>{{u.website}}</td>
+  </tr>
+</table>

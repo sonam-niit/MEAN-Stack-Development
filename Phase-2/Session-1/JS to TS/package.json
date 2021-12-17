@@ -1,0 +1,17 @@
+{
+  "name": "jstots",
+  "version": "1.0.0",
+  "description": "Javascript To Typescript",
+  "main": "index.js",
+  "scripts": {
+    "tsc:w":"tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "@types/react": "^17.0.37",
+    "typescript": "^4.5.2"
+  }
+}
