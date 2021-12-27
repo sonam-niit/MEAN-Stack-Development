@@ -1,0 +1,21 @@
+[
+    {
+        "id":"1011",
+        "fname":"sonam",
+        "lname":"soni",
+        "email":"sonam@gmail.com"
+    },
+    {
+        "id":"1012",
+        "fname":"Akshaya",
+        "lname":"soni",
+        "email":"aka@gmail.com"
+    },
+    {
+        "id":"1012",
+        "fname":"Prajval",
+        "lname":"soni",
+        "email":"praj@gmail.com"
+    }
+
+]
