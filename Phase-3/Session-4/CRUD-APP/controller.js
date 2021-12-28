@@ -5,6 +5,11 @@ const router= express.Router();
 
 products: Product[10]=[];
 router.get("",(req,res)=>{
+    if(!this.products)
+    {
+        this.products=[];
+        this.products.push(new Product('Scale',23.34));
+    }
     res.status(200).send(this.products);
 });
 

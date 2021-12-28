@@ -1,0 +1,11 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket=io();
+
+    socket.on('news',(data)=>{
+        console.log(data.hello);
+
+        //send client message to server
+       // socket.emit('client message',{my:'data'})
+    })
+</script>
