@@ -1,0 +1,110 @@
+Scenario
+---------------------------
+transfer money from account A to account B
+subtract amount from A
+add in B account
+
+--------------------------------------------------------------
+create accounts collection to store account info
+
+create transactions collection to store transaction info
+
+---------------------------------------------------------------
+
+db.accounts.insert([
+	{_id:"A",balance:1000,pendingTransaction:[]},
+	{_id:"B",balance:1000,pendingTransaction:[]}
+])
+
+
+db.transactions.insert({_id:1,source:"A",destination:"B",value:100,state:"initial", lastModified: new Date()})
+
+------------------------------------------------------------------------------
+get the transaction which are at inital state
+
+var t=db.transaction.find({state:"initial"});
+
+------------------------------------------------------
+update state to pending
+
+db.transactions.update(
+	{_id:t._id,state:"initial"},
+
+	{
+		$set:{state:"pending"},
+		$currentDate:{lastModified:true}
+	}
+	
+)
+-----------------------------------------------------------
+Apply the transaction in accounts
+
+db.accounts.update(
+	{_id:t.source,pendingTransaction:{$ne:t._id}},
+
+	{$inc:{balance: -t.value},$push:{pendingTransaction:t._id}}
+)
+
+db.accounts.update(
+	{_id:t.destination,pendingTransaction:{$ne:t._id}},
+
+	{$inc:{balance: t.value},$push:{pendingTransaction:t._id}}
+)
+
+===================================================================
+Update transaction
+
+db.transactions.update(
+	{_id:t._id,state:"pending"},
+
+	{
+		$set:{state:"applied"},
+		$currentDate:{lastModified:true}
+	}
+	
+)
+
+=====================================================================
+to complete transactions update both accounts
+
+db.accounts.update(
+	{_id:t.source,pendingTransaction:t._id},
+
+	{$pull:{pendingTransaction:t._id}}
+)
+
+db.accounts.update(
+	{_id:t.destination,pendingTransaction:t._id},
+
+	{$pull:{pendingTransaction:t._id}}
+)
+
+============================================================================
+update transaction state
+
+
+
+db.transactions.update(
+	{_id:t._id,state:"applied"},
+
+	{
+		$set:{state:"done"},
+		$currentDate:{lastModified:true}
+	}
+	
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
