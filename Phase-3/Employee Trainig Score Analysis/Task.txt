@@ -1,0 +1,34 @@
+Employee Training Score Analysis
+DESCRIPTION
+
+Project Objective:
+
+Write a program using a command prompt to perform the employee training data analysis for a leading training provider company.
+
+Background of the problem statement:
+
+Many prestigious organizations send their employees to this leading corporate training provider to learn different skills. The training provider company has decided to share an analysis report with its clients. This report will help their clients identify the employees who have completed the training and evaluation exam, understand their strengths and areas for improvement. This will be a unique selling feature. This company has a large amount of data to deal with and has hired you to solve this problem.
+
+employees.json (import this file in mongodb database)
+
+JSON file contains the following columns:
+
+ 
+
+Id: Id of the person who was trained
+
+Name: Name of the person who was trained
+
+Score: Score achieved by the person for the specific term
+
+
+Requirements: 
+
+1. Find the number of employees who failed in term 1 (pass mark = 37)
+
+2. Find the average score of employees for term 1
+
+3. Find employees who passed in all three terms
+
+4. Find the average score of employees
+
