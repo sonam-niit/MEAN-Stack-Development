@@ -1,0 +1,20 @@
+<h1>
+    Simplilearn Employees
+</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Mobile Number</th>
+    </tr>
+    {{#each data}}
+    <tr>
+         
+        <td>{{this.fname}}</td>
+        <td>{{this.salary}}</td>
+        <td>{{this.mno}}</td>
+       
+    </tr>
+    {{/each}}
+</table>
