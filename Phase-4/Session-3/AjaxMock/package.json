@@ -1,0 +1,27 @@
+{
+  "name": "modelexample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "karma": "^6.3.10",
+    "karma-html2js-preprocessor": "^1.1.0",
+    "karma-jasmine-jquery": "^0.1.1",
+    "karma-sinon": "^1.0.5",
+    "sinon": "^12.0.1"
+  },
+  "devDependencies": {
+    "jasmine-core": "^4.0.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-jasmine": "^4.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
